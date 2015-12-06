@@ -1,8 +1,3 @@
-Meteor.startup(function() {
-  process.env.MAIL_URL = "smtp://" + Meteor.settings.mandrill_user + ":" +
-    Meteor.settings.mandrill_password + "@smtp.mandrillapp.com:587/";
-});
-
 Meteor.methods({
   sendInvitation: function(email, summary, organizer, location, start, end) {
     var cal = ical({
